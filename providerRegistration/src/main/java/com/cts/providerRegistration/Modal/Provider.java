@@ -24,7 +24,7 @@ public class Provider {
 
     @Column(name = "Phone_Number")
     @Size(min = 10, max = 10)
-    private int Phone_number;
+    private String Phone_number;
 
     @Column(name = "Gender")
     @NonNull
@@ -37,7 +37,7 @@ public class Provider {
     public Provider() {
     }
 
-    public Provider(int provider_id, String provider_name, String email_id, int phone_number, char gender,
+    public Provider(int provider_id, String provider_name, String email_id, String phone_number, char gender,
             int organization_id) {
         Provider_id = provider_id;
         Provider_name = provider_name;
@@ -71,11 +71,11 @@ public class Provider {
         Email_id = email_id;
     }
 
-    public int getPhone_number() {
+    public String getPhone_number() {
         return Phone_number;
     }
 
-    public void setPhone_number(int phone_number) {
+    public void setPhone_number(String phone_number) {
         Phone_number = phone_number;
     }
 
