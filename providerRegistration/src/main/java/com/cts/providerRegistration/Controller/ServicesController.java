@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cts.providerRegistration.Modal.Services;
 import com.cts.providerRegistration.Service.ServicesService;
+import com.cts.providerRegistration.exceptionHandler.serviceNotFoundException;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -20,7 +21,7 @@ public class ServicesController {
     private ServicesService servicesService;
 	
 	@GetMapping(value = "/get-all-service")
-    public List<Services> getAllServices() {
+    public List<Services> getAllServices() throws serviceNotFoundException {
         return servicesService.getAllService();
     }
 }

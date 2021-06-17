@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cts.providerRegistration.Modal.Organization;
 import com.cts.providerRegistration.Service.OrganizationService;
+import com.cts.providerRegistration.exceptionHandler.notNullExceptions;
+import com.cts.providerRegistration.exceptionHandler.organizationNotFoundException;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -19,20 +21,20 @@ import com.cts.providerRegistration.Service.OrganizationService;
 public class OrganizationController {
 
 	@Autowired
-    private OrganizationService organizationService;
-	
+	private OrganizationService organizationService;
+
 	@GetMapping(value = "/")
-    public String index() {
-        return "Server is online";
-    }
-	
+	public String index() {
+		return "Server is online";
+	}
+
 	@GetMapping(value = "/get-all-organization")
-    public List<Organization> getAllOrganizations() {
-        return organizationService.getAllOrganization();
-    }
-	
+	public List<Organization> getAllOrganizations() throws organizationNotFoundException {
+		return organizationService.getAllOrganization();
+	}
+
 	@PostMapping(value = "/set-organization")
-    public String setOrganization(@RequestBody final Organization organization) {
-        return organizationService.setOrganization(organization);
-    }
+	public String setOrganization(@RequestBody final Organization organization) throws notNullExceptions {
+		return organizationService.setOrganization(organization);
+	}
 }

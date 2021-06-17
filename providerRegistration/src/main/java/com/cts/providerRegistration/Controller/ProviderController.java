@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cts.providerRegistration.Modal.Provider;
 import com.cts.providerRegistration.Service.ProviderService;
+import com.cts.providerRegistration.exceptionHandler.notNullExceptions;
+import com.cts.providerRegistration.exceptionHandler.providerNotFoundException;
 
 
 @RestController
@@ -23,12 +25,12 @@ public class ProviderController {
     private ProviderService providerService;
 	
 	@GetMapping(value = "/get-all-provider")
-    public List<Provider> getAllProviders() {
+    public List<Provider> getAllProviders() throws providerNotFoundException {
         return providerService.getAllProvider();
     }
 
 	@PostMapping(value = "/set-provider")
-    public String setProvider(@RequestBody final Provider provider) {
+    public String setProvider(@RequestBody final Provider provider) throws notNullExceptions {
         return providerService.setProvider(provider);
     }
 }
