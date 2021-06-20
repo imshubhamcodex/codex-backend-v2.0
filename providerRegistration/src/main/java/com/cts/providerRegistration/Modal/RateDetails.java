@@ -12,7 +12,6 @@ import org.springframework.lang.NonNull;
 public class RateDetails {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
 	@Column(name = "Organization_id")

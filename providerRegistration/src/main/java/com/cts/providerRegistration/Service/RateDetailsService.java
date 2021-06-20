@@ -25,12 +25,16 @@ public class RateDetailsService {
 	}
 
 	public String setRateDetails(RateDetails rateDetails) throws notNullExceptions {
-		if (rateDetails.getId() == 0 || rateDetails.getOrganization_id() == 0 || rateDetails.getService_id() == 0
-				|| rateDetails.getRate() == 0.0 || rateDetails.getDiscounted_rate() == 0.0) {
-			throw new notNullExceptions("All fields are mendatory");
-		} else {
-			rateDetailsRepository.save(rateDetails);
-			return "RateDetails Saved";
-		}
+//		if (rateDetails.getOrganization_id() == 0 || rateDetails.getService_id() == 0
+//				|| rateDetails.getRate() < 0 || rateDetails.getDiscounted_rate() < 0) {
+//			throw new notNullExceptions("All fields are mendatory");
+//		} else {
+//			rateDetailsRepository.save(rateDetails);
+//			return "RateDetails Saved";
+//		}
+		
+		rateDetailsRepository.save(rateDetails);
+		return "RateDetails Saved";
+		
 	}
 }
