@@ -2,6 +2,8 @@ package com.cts.providerRegistration.Controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,17 +22,21 @@ import com.cts.providerRegistration.exceptionHandler.providerNotFoundException;
 @CrossOrigin(origins = "*")
 @RequestMapping(value = "/api-pod8")
 public class ProviderController {
+	
+	Logger logger = LoggerFactory.getLogger(ProviderController.class);
 
 	@Autowired
     private ProviderService providerService;
 	
 	@GetMapping(value = "/get-all-provider")
     public List<Provider> getAllProviders() throws providerNotFoundException {
+		logger.info("--- [    getAllProviders] method invoked in controller ---");
         return providerService.getAllProvider();
     }
 
 	@PostMapping(value = "/set-provider")
     public String setProvider(@RequestBody final Provider provider) throws notNullExceptions {
+		logger.info("--- [    setProvider] method invoked in controller ---");
         return providerService.setProvider(provider);
     }
 }

@@ -2,6 +2,8 @@ package com.cts.providerRegistration.Service;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,11 +14,15 @@ import com.cts.providerRegistration.exceptionHandler.rateNotFoundException;
 
 @Service
 public class RateDetailsService {
+	
+	Logger logger = LoggerFactory.getLogger(RateDetailsService.class);
 
 	@Autowired
 	private RateDetailsRepository rateDetailsRepository;
 
 	public List<RateDetails> getAllRateDetail() throws rateNotFoundException {
+		logger.warn("--- [    getAllRateDetail] method invoked in services ---");
+		
 		if (rateDetailsRepository.findAll().size() == 0) {
 			throw new rateNotFoundException("Rate Details Not Found");
 		} else {
@@ -32,6 +38,10 @@ public class RateDetailsService {
 //			rateDetailsRepository.save(rateDetails);
 //			return "RateDetails Saved";
 //		}
+		
+		logger.warn("--- [    setRateDetails] method invoked in services ---");
+		
+		logger.warn("--- [    setRateDetails] method accessing repository ---");
 		
 		rateDetailsRepository.save(rateDetails);
 		return "RateDetails Saved";
