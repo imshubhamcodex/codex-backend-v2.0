@@ -30,3 +30,31 @@
 2021-06-22 11:32:56.584  INFO 4948 --- [http-nio-8081-exec-4] c.c.p.Controller.ProviderController      : --- [    getAllProviders] method invoked in controller ---
 2021-06-22 11:32:56.585  WARN 4948 --- [http-nio-8081-exec-4] c.c.p.Service.ProviderService            : --- [    getAllProvider] method invoked in services ---
 2021-06-22 11:32:56.701  WARN 4948 --- [http-nio-8081-exec-4] c.c.p.Service.ProviderService            : --- [    getAllProvider] method accessing repository ---
+2021-06-22 20:43:38.984  INFO 18104 --- [main] c.p.ProviderRegistrationApplicationTests : Starting ProviderRegistrationApplicationTests using Java 15.0.2 on DESKTOP-O0UDJHB with PID 18104 (started by Computer in C:\Users\Computer\Desktop\Project Codex Backend v2.0\codex_backend_v2.0\providerRegistration)
+2021-06-22 20:43:39.002  INFO 18104 --- [main] c.p.ProviderRegistrationApplicationTests : No active profile set, falling back to default profiles: default
+2021-06-22 20:43:40.737  INFO 18104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-22 20:43:40.954  INFO 18104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 185 ms. Found 4 JPA repository interfaces.
+2021-06-22 20:43:43.466  INFO 18104 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-22 20:43:43.666  INFO 18104 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.31.Final
+2021-06-22 20:43:44.159  INFO 18104 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-22 20:43:44.636  INFO 18104 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-22 20:43:47.163  INFO 18104 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-22 20:43:47.288  INFO 18104 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-06-22 20:44:00.261  INFO 18104 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-22 20:44:00.338  INFO 18104 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-22 20:44:05.244  WARN 18104 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-22 20:44:08.534  INFO 18104 --- [main] c.p.ProviderRegistrationApplicationTests : Started ProviderRegistrationApplicationTests in 30.382 seconds (JVM running for 33.67)
+2021-06-22 20:44:08.537  INFO 18104 --- [main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2021-06-22 20:44:08.541  INFO 18104 --- [main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-22 20:44:11.160  WARN 18104 --- [main] c.c.p.Service.ProviderService            : --- [    getAllProvider] method invoked in services ---
+2021-06-22 20:44:11.173  WARN 18104 --- [main] c.c.p.Service.ProviderService            : --- [    getAllProvider] method accessing repository ---
+2021-06-22 20:44:11.636  WARN 18104 --- [main] c.c.p.Service.ServicesService            : --- [    getAllService] method invoked in services ---
+2021-06-22 20:44:11.646  WARN 18104 --- [main] c.c.p.Service.ServicesService            : --- [    getAllService] method accessing repository ---
+2021-06-22 20:44:11.755  WARN 18104 --- [main] c.c.p.Service.OrganizationService        : --- [    getAllOrganizations] method invoked in services ---
+2021-06-22 20:44:11.865  WARN 18104 --- [main] c.c.p.Service.OrganizationService        : --- [    getAllOrganizations] method accessing repository ---
+2021-06-22 20:44:11.922  WARN 18104 --- [main] c.c.p.Service.RateDetailsService         : --- [    getAllRateDetail] method invoked in services ---
+2021-06-22 20:44:12.801  WARN 18104 --- [main] c.c.p.Service.OrganizationService        : --- [    getAllOrganizations] method invoked in services ---
+2021-06-22 20:44:12.810  WARN 18104 --- [main] c.c.p.Service.OrganizationService        : --- [    getAllOrganizations] method accessing repository ---
+2021-06-22 20:44:12.854  WARN 18104 --- [main] c.c.p.Service.RateDetailsService         : --- [    getAllRateDetail] method invoked in services ---
+2021-06-22 20:44:12.895  WARN 18104 --- [main] c.c.p.Service.ProviderService            : --- [    getAllProvider] method invoked in services ---
+2021-06-22 20:44:12.905  WARN 18104 --- [main] c.c.p.Service.ProviderService            : --- [    getAllProvider] method accessing repository ---
